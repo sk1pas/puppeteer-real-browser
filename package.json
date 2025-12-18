@@ -1,7 +1,20 @@
 {
   "name": "puppeteer-real-browser",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "This package is designed to bypass puppeteer's bot-detecting captchas such as Cloudflare. It acts like a real browser and can be managed with puppeteer.",
+  "author": "sk1pas",
+  "contributors": ["zfc-software"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sk1pas/puppeteer-real-browser"
+  },
+  "homepage": "https://github.com/sk1pas/puppeteer-real-browser",
+  "bugs": {
+    "email": "notsk1pas@gmail.com",
+    "url": "https://github.com/sk1pas/puppeteer-real-browser/issues"
+  },
+  "readme": "README.md",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.mjs",
   "exports": {
@@ -35,8 +48,6 @@
     "puppeteer-undetect-cf",
     "puppeteer-undetectable-cf-bypass"
   ],
-  "author": "zfc-software",
-  "license": "ISC",
   "dependencies": {
     "chrome-launcher": "^1.1.2",
     "ghost-cursor": "^1.3.0",
@@ -45,10 +56,7 @@
     "tree-kill": "^1.2.2",
     "xvfb": "^0.4.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zfcsoftware/puppeteer-real-browser"
-  },
-  "readme": "README.md",
-  "homepage": "https://github.com/zfcsoftware/puppeteer-real-browser"
+  "engines": {
+    "node": ">=22"
+  }
 }
