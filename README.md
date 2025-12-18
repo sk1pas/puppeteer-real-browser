@@ -1,37 +1,7 @@
-> [!WARNING]
-> This repo will no longer receive updates. Thank you to everyone who supported it.
+> This project is a fork of the original work by @zfcsoftware,
+licensed under the MIT License.
 
-<br/>
-<p align="center">
-  <a href="https://github.com/zfcsoftware/puppeteer-real-browser">
-    <img src="https://github.com/zfcsoftware/puppeteer-real-browser/assets/123484092/cc8b5fb9-504a-4fd3-97f6-a51990bb4303" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Puppeteer Real Browser</h3>
-
-  <p align="center">
-    This package prevents Puppeteer from being detected as a bot in services like Cloudflare and allows you to pass captchas without any problems. It behaves like a real browser.
-    <br/>
-    <br/>
-    If you are only interested in Cloudflare WAF, please check this repo:<br/> https://github.com/zfcsoftware/cf-clearance-scraper
-  </p>
-</p>
-
-<p align="center">
-<video src='https://github.com/user-attachments/assets/5dddca09-6941-42e9-9427-5c666632483f'/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/github/contributors/zfcsoftware/puppeteer-real-browser?color=dark-green" alt="Contributors" />
-  <img src="https://img.shields.io/github/forks/zfcsoftware/puppeteer-real-browser?style=social" alt="Forks" />
-  <img src="https://img.shields.io/github/stars/zfcsoftware/puppeteer-real-browser?style=social" alt="Stargazers" />
-  <img src="https://img.shields.io/github/issues/zfcsoftware/puppeteer-real-browser" alt="Issues" />
-  <img src="https://img.shields.io/github/license/zfcsoftware/puppeteer-real-browser" alt="License" />
-</p>
-
-## Sponsor
-
-[![ScrapeDo](data/sdo.gif)](https://scrape.do/?utm_source=github&utm_medium=repo_prb)
+<h3 align="center">Puppeteer Real Browser</h3>
 
 ## Installation
 
@@ -154,7 +124,7 @@ You can use the Dockerfile file in the main directory to use this library with d
 To run a test, you can follow these steps
 
 ```bash
-git clone https://github.com/zfcsoftware/puppeteer-real-browser
+git clone https://github.com/sk1pas/puppeteer-real-browser
 ```
 
 ```bash
@@ -169,51 +139,9 @@ docker build -t puppeteer-real-browser-project .
 docker run puppeteer-real-browser-project
 ```
 
-## Support Us
-
-This library is completely open source and is constantly being updated. Please star this repo to support this project. Starring and supporting the project will ensure that it receives updates. If you want to support it further, you can consider sponsoring me (https://github.com/sponsors/zfcsoftware)
-
-## Quick Questions and Answers
-
-### I Cannot Access Functions in Window Object What Should I Do?
-
-This problem is probably caused by the runtime being closed by the rebrowser used.
-https://github.com/zfcsoftware/puppeteer-real-browser/tree/access-window
-I created a branch for this. You can access the value you want by adding javascript to the page source with puppeteer-intercept-and-modify-requests as done in success.js. If you know about the Chrome plugin, you can also use it.
-
-### page.setViewport method is not working, what should I do?
-
-As with the initialization arguments in the test module, you can set the defaultViewport in connectOption. If you set null, it will take up as much space as the width of the Browser.
-
-### Does the library have any known detection problems?
-
-using puppeteer-core patched with rebrowser. Tested with the challenging sites in the test file in headless false mode and passed with flying colors. The only known issue is that the mouse screeenX does not match the mouse position. This has been patched in the library.
-
-The ghost-cursor is included in the library. (https://github.com/zfcsoftware/puppeteer-real-browser/blob/2a5fba37a85c15625fb3c8d1f7cf8dcb109b9492/lib/cjs/module/pageController.js#L54) You can use ghost-cursor with page.realCursor. page.click It is recommended to use page.realClick instead of page.click.
-
-### What Makes This Library Special?
-
-This library lets you launch and use Chrome in its most natural state. It tries to get the best results with minimal patching. Thanks to @nwebson who fixed the Runtime.enable issue from this point. If using rebrowser solves your problem, I don't recommend using real browser.
-
-Real browser does not give you full control over launching. It launches Chrome with Chrome launcher and connects to it with rebrowser.
-
-### Why can't I pass Recaptcha v3?
-
-https://stackoverflow.com/questions/52546045/how-to-pass-recaptcha-v3
-
-Please see the answers in the link above. When there is no Google session, no matter how good your browser is, recaptcha identifies you as a bot. It is a common problem.
-
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/zfcsoftware/puppeteer-real-browser/blob/main/LICENSE.md) for more information.
-
-## Thank You
-
-**Contributions to the current version**
-
-- **rebrowser™** - [rebrowser™](https://github.com/rebrowser) - _Created a patch pack for Runtime, which left many traces behind. Since Runtime was not used, most problems were solved. TargetFilter, which was used in the past and caused many problems, was switched to this patch. The Puppeteer-core library was patched and added to this repo. A lot of good bot detection systems are not caught thanks to rebrowser. Please star the rebrowser repo. Thank you. (https://github.com/rebrowser/rebrowser-patches)_
-
-- **Skill Issue™** - [TheFalloutOf76](https://github.com/TheFalloutOf76) - _He realized that mouse movements could not be simulated accurately and created a solution for this. His solution is used in this library. (https://github.com/TheFalloutOf76/CDP-bug-MouseEvent-.screenX-.screenY-patcher)_
+Distributed under the MIT License. See [LICENSE](https://github.com/sk1pas/puppeteer-real-browser/blob/main/LICENSE.md) for more information.
 
 ## Disclaimer of Liability
 
